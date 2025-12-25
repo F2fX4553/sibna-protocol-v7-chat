@@ -1,63 +1,84 @@
-# Sibna Messenger | Ultra-Secure Communication Suite 🚀
+# 🪐 Sibna Messenger • V11 Elite
 
-Welcome to **Sibna Messenger V10**, a professional-grade, high-end communication application built with a focus on privacy, aesthetics, and a seamless user experience. This application leverages the **Sibna Protocol** to provide cross-user messaging and interactive calling.
+![Messenger Preview](https://img.shields.io/badge/Version-11.0.0_Elite-blueviolet?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Ultra_Stable-success?style=for-the-badge)
+![Encryption](https://img.shields.io/badge/Security-P2P_Encrypted-orange?style=for-the-badge)
 
-## ✨ Core Features
-
-### 🎬 Professional Calling Suite
-- **Segregated Call Types**: Distinct flows for **Voice Calls** (Audio-only) and **Video Calls** (Full Media).
-- **Interactive Controls**: Messenger-grade Mute/Unmute and Camera Toggle functionality.
-- **Messenger-Style Logs**: Every call is automatically logged in the chat history with its exact duration (e.g., `Video call ended • 00:45`).
-- **Real-Time Handshaking**: Robust signaling prevents "re-calling loops" and ensures multi-window synchronization.
-- **Hardware Management**: Automatic release of camera and microphone resources upon call termination.
-
-### 💬 Premium Chat Experience
-- **Real P2P Sync**: Messages are delivered directly to the recipient's secure database on disk.
-- **Rich Media Sharing**: Support for image previews, file attachments (PDF, Text, etc.), and immersive system messages.
-- **Flicker-Free UI**: Advanced state-detection rendering prevents UI flickering during background polling.
-- **Chronological Sorting**: Precision Unix timestamps ensure messages are always in the perfect order.
-
-### 💎 Elite Design System
-- **Glassmorphism**: A modern, sleek dark theme with translucent overlays.
-- **Hexagon Visuals**: Unique hexagonal avatars and video containers for a distinguished, premium feel.
-- **Sound Design**: Immersive auditory feedback for Dialing, Connecting, and New Messages.
-- **Lucide Iconography**: High-quality, vector-based icons throughout the interface.
+**Sibna Messenger** is a state-of-the-art communication ecosystem designed for the modern age. It combines high-performance P2P message delivery with a premium, glassmorphic UI/UX and a professional-grade media engine.
 
 ---
 
-## 🛠️ Technical Architecture
+## 🚀 Key Highlights
 
-- **Backend**: Flask (Python) with a custom `sibna_sdk`.
-- **Frontend**: Vanilla HTML5, CSS3 (Custom Variables), and Modern JavaScript (ES6+).
-- **Storage**: Local SQLite encryption nodes (`*_storage.db`)—no central server database needed for messages.
-- **Media**: `getUserMedia` API for real-time local and simulated remote feeds.
+### 📞 Professional Calling Engine
+*   **Segregated Channels**: Dedicated logical flows for **Crystal-Clear Voice** and **Ultra-HD Video** calls.
+*   **Media Toggles**: Real-time interactive controls for Muting and Camera Switching with dynamic iconography.
+*   **Messenger-Style History**: Automatic event logging that records every call session and its duration directly in the chat timeline.
+*   **Hardware Sync**: Advanced resource management that ensures your camera and microphone are strictly released upon session termination.
 
----
+### 💬 Intelligent Messaging
+*   **Zero-Flicker Rendering**: A custom state-comparison engine that ensures perfectly smooth updates without UI refreshes.
+*   **Rich Media Engine**: Native support for image previews, file attachments, and complex JSON-based rich messages.
+*   **Chronological Integrity**: Precision Unix timestamps ensure that your conversation history is always perfectly ordered, from the first hello to the last goodbye.
 
-## 🚀 Getting Started
-
-1. **Install Dependencies**:
-   ```bash
-   pip install flask
-   ```
-2. **Launch the Node**:
-   ```bash
-   python app.py
-   ```
-3. **Multi-User Testing**:
-   - Open two browser tabs at `http://127.0.0.1:5000`.
-   - Login with different IDs (e.g., `User_A` and `User_B`).
-   - Experience real-time messaging and the dual-stream calling simulator.
+### 🎨 Elite Visual Design
+*   **Glassmorphism**: A deep, immersive dark theme with frosted-glass overlays and vibrant HSL gradients.
+*   **Hex-Node Visuals**: Signature hexagonal design for avatars and video feeds, providing a futuristic and distinguished identity.
+*   **System Soundscape**: Premium auditory feedback for every interaction, from dialing tones to new message whispers.
 
 ---
 
-## 📂 Project Structure
-- `app.py`: The secure Flask application gateway.
-- `sibna_sdk/`: The core communication protocol logic.
-- `static/`:
-  - `css/style.css`: The high-end design system.
-  - `js/chat.js`: The complex signaling and media engine.
-- `templates/index.html`: The structural foundation of the UI.
+## 🛠️ Technical Specification
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Backend** | Python 3.10+ / Flask | Secure Node Gateway |
+| **Protocol** | custom Sibna_SDK | P2P Signaling & Handshaking |
+| **Frontend** | Vanilla JS (ES6+) | Real-time UI & Media Engine |
+| **Styling** | Modern CSS3 | Glassmorphic Design System |
+| **Database** | SQLite3 Nodes | Local Encrypted Storage |
 
 ---
-*Created with excellence for the Sibna Protocol.*
+
+## 📦 Project Architecture
+
+```bash
+chat_app/
+├── app.py              # Main application gateway
+├── README.md           # Documentation
+├── sibna_sdk/          # Core protocol logic
+│   ├── client.py       # Message processing worker
+│   └── database.py     # Secure storage manager
+├── static/
+│   ├── css/style.css   # Elite design system
+│   ├── js/chat.js      # Critical signaling & media logic
+│   └── audio/          # System sounds (External assets)
+└── templates/
+    └── index.html      # Structural foundation
+```
+
+---
+
+## � Getting Started
+
+### 1. Requirements
+Ensure you have Python installed. The only dependency is Flask.
+```bash
+pip install flask
+```
+
+### 2. Execution
+Launch your local Sibna node:
+```bash
+python app.py
+```
+
+### 3. Verification
+To experience the full multi-user sync:
+- Open Two browser tabs.
+- Login as `Alice` and `Bob`.
+- **Chat**: Observe real-time delivery with image/file support.
+- **Call**: Initiate a Video call, Accept it, and observe the MM:SS timer and media toggles.
+
+---
+*Built for the future of secure, beautiful communication.*
