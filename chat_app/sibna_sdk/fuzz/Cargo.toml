@@ -1,0 +1,15 @@
+[package]
+name = "secure-protocol-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+secure-protocol = { path = ".." }
+
+[[bin]]
+name = "fuzz_decrypt"
+path = "fuzz_targets/fuzz_decrypt.rs"
+test = false
+doc = false

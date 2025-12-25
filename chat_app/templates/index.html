@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibna | Protocol V3 Elite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dark-theme">
+    <!-- Auth Screen -->
+    <div id="login-modal" class="auth-wrapper">
+        <div class="auth-inner">
+            <div class="auth-brand">
+                <div class="brand-logo-hex">
+                    <i data-lucide="shield" size="48"></i>
+                </div>
+                <h1>Sibna Protocol</h1>
+                <p>Establishing secure connection...</p>
+            </div>
+
+            <div class="auth-fields">
+                <div class="field">
+                    <label>Identity Node Name</label>
+                    <div class="input-glow-group">
+                        <i data-lucide="hash" size="18"></i>
+                        <input type="text" id="username-input" placeholder="Enter your handle..." autocomplete="off">
+                    </div>
+                </div>
+                <button id="login-btn" class="btn-primary-glow">
+                    <span>Initialize Session</span>
+                    <i data-lucide="zap" size="18"></i>
+                </button>
+            </div>
+
+            <div class="auth-status">
+                <div class="pulse-indicator"></div>
+                <span>Secured by End-to-End Encryption</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app-ui" class="app-shell hidden">
+        <aside class="app-sidebar">
+            <div class="sidebar-header-elite">
+                <div class="logo-group">
+                    <i data-lucide="shield-check"></i>
+                    <span>Sibna Elite</span>
+                </div>
+                <button class="btn-sidebar-top"><i data-lucide="more-horizontal"></i></button>
+            </div>
+
+            <div class="sidebar-search-v3">
+                <div class="search-wrap">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="user-search-input" placeholder="Find identity...">
+                </div>
+            </div>
+
+            <div class="sidebar-nav">
+                <div class="nav-label">Direct Messages</div>
+                <div id="contacts-list" class="contacts-scroll">
+                    <!-- Dynamic contacts from discovery -->
+                </div>
+            </div>
+
+            <div class="sidebar-footer-v3">
+                <div class="user-pill">
+                    <div id="my-avatar" class="mini-avatar">?</div>
+                    <div class="user-details">
+                        <div id="my-name">Guest</div>
+                        <div class="online-tag">Network Active</div>
+                    </div>
+                </div>
+                <button id="logout-btn" class="footer-action"><i data-lucide="log-out"></i></button>
+            </div>
+        </aside>
+
+        <main class="chat-engine">
+            <header class="chat-header-v3">
+                <div class="active-contact">
+                    <div id="chat-recipient-avatar" class="target-avatar-hex">?</div>
+                    <div class="target-info">
+                        <div id="chat-recipient-name">Protocol Standby</div>
+                        <div class="encryption-status">
+                            <i data-lucide="lock" size="12"></i>
+                            P2P Verified
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-actions-v3">
+                    <button id="call-btn-v3" class="action-btn-hex"><i data-lucide="phone"></i></button>
+                    <button id="video-btn-v3" class="action-btn-hex"><i data-lucide="video"></i></button>
+                    <button class="action-btn-hex"><i data-lucide="info"></i></button>
+                </div>
+            </header>
+
+            <div id="messages-container" class="message-viewport">
+                <!-- Welcome/Empty State inside JS -->
+            </div>
+
+            <footer class="input-bar-v3">
+                <div id="file-preview-container" class="preview-area-v3 hidden"></div>
+
+                <div class="input-group-v3">
+                    <button id="attach-btn" class="utility-btn"><i data-lucide="plus-circle"></i></button>
+                    <input type="file" id="file-input" class="hidden" multiple>
+
+                    <div class="textarea-container">
+                        <textarea id="message-input" placeholder="Compose secure transmission..." rows="1"></textarea>
+                    </div>
+
+                    <button id="send-btn" class="send-btn-v3">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Communication Overlay (Mock Call/Video) -->
+    <div id="comm-overlay" class="comm-overlay hidden">
+        <div class="comm-card">
+            <div class="video-grid" id="video-grid">
+                <video id="remote-video" autoplay playsinline class="remote-v"></video>
+                <video id="local-video" autoplay playsinline muted class="local-v"></video>
+                <div class="comm-avatar-pulse" id="comm-avatar">?</div>
+            </div>
+            <h2 id="comm-name">Calling...</h2>
+            <div id="call-timer" class="call-timer-v8 hidden">00:00</div>
+            <p id="comm-status">Connecting to encrypted node</p>
+            <div class="comm-controls">
+                <button id="accept-call-btn" class="comm-btn accept hidden"><i data-lucide="phone"></i></button>
+                <button id="mute-btn" class="comm-btn mute"><i data-lucide="mic"></i></button>
+                <button id="end-call-btn" class="comm-btn end"><i data-lucide="phone-off"></i></button>
+                <button id="toggle-cam-btn" class="comm-btn video"><i data-lucide="video"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
