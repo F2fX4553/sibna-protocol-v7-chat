@@ -1,9 +1,0 @@
-language = "C"
-
-[parse]
-parse_deps = true
-header = "/* Sibna C Bindings */"
-include = ["sibna-core"]
-
-[export]
-include = ["SecureContextHandle", "SecureSessionHandle", "FFIError"]
